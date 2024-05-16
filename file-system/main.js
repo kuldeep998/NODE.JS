@@ -34,6 +34,14 @@ fs.writeFile('file2.txt', 'File data override', function(err) {
     console.log('File data override successfully');
 });
 
+// Example 5
+fs.unlink('file2.txt', function(err) {
+    if (err) {
+        throw err;
+    }
+    console.log('File deleted successfully');
+});
+
 http.createServer(function(req, res) {
     // read file
     fs.readFile('file.html', function(err, data) {
