@@ -34,12 +34,21 @@ fs.writeFile('file2.txt', 'File data override', function(err) {
     console.log('File data override successfully');
 });
 
+
 // Example 5
 fs.unlink('file2.txt', function(err) {
     if (err) {
         throw err;
     }
     console.log('File deleted successfully');
+});
+
+// Example 6
+fs.rename('dummy.txt', 'dummyFile.txt', function(err) {
+    if (err) {
+        throw err;
+    }
+    console.log('File renamed successfully');
 });
 
 http.createServer(function(req, res) {
